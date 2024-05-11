@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<img alt="image" width="600"  src="https://github.com/LikeLion-SKU/12th-SKUNIV-Festival-Front/assets/readme/thumnail">
+<img alt="image" width="600"  src="hhttps://github.com/LikeLion-SKU/12th-SKUNIV-Festival-Front/blob/main/src/assets/images/readme/thumnail.png">
 </div>
     
 
