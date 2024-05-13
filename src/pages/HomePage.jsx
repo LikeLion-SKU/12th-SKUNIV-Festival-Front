@@ -22,8 +22,29 @@ import bgimg from '../assets/images/homePage/backgroundimage.png';
 import cdleft from '../assets/images/homePage/cdleft.svg';
 import cdright from '../assets/images/homePage/cdright2.png';
 import tree from '../assets/images/homePage/tree.png';
+import { useLayoutEffect } from 'react';
 
 export default function HomePage() {
+  const images = [
+    test3,
+    pinkMuhly,
+    playlist,
+    cd,
+    AllLogo,
+    playbar,
+    cdleft,
+    cdright,
+    tree,
+  ];
+  const preloadHompageImg = (images) => {
+    for (let i = 0; i < images.length; i++) {
+      const img = new Image();
+      img.src = images[i];
+    }
+  };
+  useLayoutEffect(() => {
+    preloadHompageImg(images);
+  }, []);
   return (
     <>
       <MenuBar></MenuBar>
@@ -54,7 +75,10 @@ export default function HomePage() {
 
         <S.HomePageBox>
           <S.HomePageTitleHeading>BOOTH MAP</S.HomePageTitleHeading>
-          <img src={tree} style={{ width: '22px', height: 'auto' , paddingBottom: '3px'}} />
+          <img
+            src={tree}
+            style={{ width: '22px', height: 'auto', paddingBottom: '3px' }}
+          />
           <img src={map} style={{ width: '340px', height: 'auto' }} />
           <Link to="/booth">부스 둘러보기</Link>
         </S.HomePageBox>
@@ -117,7 +141,7 @@ export default function HomePage() {
               position: 'absolute',
               zIndex: '1',
               right: '-59px',
-              bottom: '300px'
+              bottom: '300px',
             }}
           />
           <Link to="/timetable">전체 일정 확인하기</Link>
