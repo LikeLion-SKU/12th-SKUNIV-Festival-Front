@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 
-import { GlobalStyle } from '@styles/components/GlobalStyles.js';
+import { GlobalStyle } from '@styles/GlobalStyles.js';
 
 import FallingAni from '@components/FallingAni.jsx';
 
